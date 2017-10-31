@@ -14,5 +14,6 @@ class MainActivity : AppCompatActivity() {
 
     fun showToast(s: String) {
         Toast.makeText(this,s,Toast.LENGTH_SHORT).show()
+        // valami
     }
 }
