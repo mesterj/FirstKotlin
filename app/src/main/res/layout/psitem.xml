@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/tvPsKod1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="123456"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvPsNev1"
+        app:layout_constraintEnd_toStartOf="@+id/tvPsNev1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPsNev1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Kábel feszület"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvPsKod1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvPsIrsz1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="1234"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvPsCim1"
+        app:layout_constraintEnd_toStartOf="@+id/tvPsCim1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPsCim1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Város utca 1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvPsIrsz1"
+        app:layout_constraintTop_toBottomOf="@+id/tvPsKod1" />
+
+
+</android.support.constraint.ConstraintLayout>

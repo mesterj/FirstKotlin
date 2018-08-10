@@ -49,17 +49,26 @@ class MainActivity : AppCompatActivity() {
         psdownloadProgress.setMessage("Partner letöltés")
         psdownloadProgress.setCancelable(false)
         psdownloadProgress.show()
-        doAsync {
+        var success = true
+            doAsync {
             val partnerletolto = PartnerService.create()
-            val partnerList = partnerletolto.partnerList().execute().body()
-            if (partnerList != null ) {
+                try {
+                val partnerList = partnerletolto.partnerList().execute().body()
                 partnerBox.put(partnerList)
-                uiThread {
+                } catch (ex: Exception) {
                     psdownloadProgress.dismiss()
+                    success = false
                 }
-            } else
-                toast("Nincs kapcsolat a szerverrel")
-        }
+                uiThread {
+                        psdownloadProgress.dismiss()
+                    if (!success)
+                        toast("Nincs kapcsolat a szerverrel")
+                }
+            }
+
+           // psdownloadProgress.dismiss()
+           // toast("Nincs kapcsolat a szerverrel")
+
     }
 
     private fun psList() {
