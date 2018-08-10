@@ -6,6 +6,7 @@ import retrofit2.http.Path
 
 interface PartnerAPI {
 
+     // anyád hogy van?
 
     @GET("entities.partner")
     fun partnerList() : Call<List<Partner>>
