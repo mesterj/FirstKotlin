@@ -11,7 +11,7 @@ class Partner (
     @Id
     var id: Long = 0,
 
-    @Unique//(replaceOnConflict=true)
+    @Unique()
     var partnerKod: String? = " ",
     var partnerNev: String? = " ",
     var partnerTelepules: String? = " ",
