@@ -4,12 +4,8 @@ import android.app.ProgressDialog
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.ProgressBar
 import android.widget.Toast
 import io.objectbox.Box
-import io.objectbox.exception.UniqueViolationException
-import io.objectbox.kotlin.boxFor
-import io.objectbox.query.Query
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.startActivity
